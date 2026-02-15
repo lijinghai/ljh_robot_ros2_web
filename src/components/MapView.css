@@ -1,0 +1,263 @@
+.MapView {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px; /* 为底部日志栏留出空间 */
+  overflow: hidden;
+  background: #0f1219;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.MapCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* 右侧控制按钮组 */
+.ViewControls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+}
+
+.ViewButton,
+.SettingsButton,
+.FocusRobotButton,
+.RelocalizeButton {
+  height: 40px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(22, 27, 38, 0.8);
+  backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ButtonIcon {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.ButtonLabel {
+  font-size: 13px;
+}
+
+.ViewButton:hover,
+.SettingsButton:hover,
+.FocusRobotButton:hover,
+.RelocalizeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.ViewButton.active,
+.SettingsButton.active,
+.FocusRobotButton.active,
+.RelocalizeButton.ConfirmButton {
+  background: #fff;
+  color: #0f1219;
+  border-color: #fff;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+}
+
+.RelocalizeButton.CancelButton {
+  background: rgba(255, 87, 115, 0.15);
+  border-color: rgba(255, 87, 115, 0.3);
+  color: #ff9fb0;
+}
+
+.RelocalizeButton.CancelButton:hover {
+  background: rgba(255, 87, 115, 0.25);
+}
+
+/* 底部控制栏 */
+.BottomControls {
+  position: absolute;
+  bottom: 50px; /* 在日志栏上方 */
+  right: 24px;
+  z-index: 10;
+}
+
+/* 坐标显示 */
+.CoordinateDisplay {
+  position: absolute;
+  bottom: 50px; /* 在日志栏上方 */
+  left: 24px;
+  background: rgba(22, 27, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  z-index: 10;
+  pointer-events: none;
+  font-family: "JetBrains Mono", monospace;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.CoordinateRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.CoordinateRow:last-child {
+  margin-bottom: 0;
+}
+
+.CoordinateLabel {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.CoordinateValue {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* 手动控制面板 */
+.ManualControlPanel {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background: rgba(22, 27, 38, 0.6);
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.ControlButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.ControlButton:active {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(0.95);
+}
+
+/* 重定位控制条 */
+.RelocalizeControls {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+  background: rgba(22, 27, 38, 0.9);
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+/* 拓扑点信息面板 */
+.TopoPointInfoPanel {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background: rgba(22, 27, 38, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  z-index: 20;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.TopoPointInfoHeader {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TopoPointInfoHeader h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.CloseButton {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.CloseButton:hover {
+  color: #fff;
+}
+
+.TopoPointInfoContent {
+  padding: 16px;
+}
+
+.NavigateButton {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  color: #0f1219;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.NavigateButton:hover {
+  background: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .BrandBar {
+    left: 70px;
+  }
+  .BrandName {
+    font-size: 18px;
+  }
+  .ViewControls {
+    top: auto;
+    bottom: 90px;
+    right: 20px;
+    flex-direction: column;
+  }
+}

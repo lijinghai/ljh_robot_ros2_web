@@ -1,0 +1,244 @@
+.MapEditor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+}
+
+.EditorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: rgba(30, 30, 30, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.EditorHeader h2 {
+  margin: 0;
+  color: white;
+  font-size: 18px;
+}
+
+.EditorContent {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.Toolbar {
+  width: 200px;
+  background-color: rgba(30, 30, 30, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.ToolbarToggle:hover {
+  background-color: rgba(40, 40, 40, 0.95);
+  color: white;
+}
+
+.ToolbarOptions {
+  width: 200px;
+  background-color: rgba(30, 30, 30, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.ToolButton {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.ToolButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.ToolButton.active {
+  background-color: rgba(33, 150, 243, 0.8);
+  border-color: rgba(33, 150, 243, 1);
+}
+
+.EditorCanvas {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.EditorMapCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.EditorMapCanvas.cursor-brush {
+  cursor: none;
+}
+
+.EditorMapCanvas.cursor-eraser {
+  cursor: none;
+}
+
+.BrushIndicator {
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.BrushIndicator-eraser {
+  border: 2px solid rgba(255, 77, 77, 0.8);
+  background-color: rgba(255, 77, 77, 0.2);
+}
+
+.BrushIndicator-brush {
+  border: 2px solid rgba(33, 150, 243, 0.8);
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.PropertyPanel {
+  width: 300px;
+  background-color: rgba(30, 30, 30, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.PropertySection {
+  margin-bottom: 24px;
+}
+
+.PropertySection h3 {
+  margin: 0 0 16px 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.PropertyRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.PropertyRow label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  min-width: 80px;
+}
+
+.PropertyRow input {
+  flex: 1;
+  padding: 6px 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.PropertyRow input:focus {
+  outline: none;
+  border-color: rgba(33, 150, 243, 0.8);
+}
+
+.PropertyRow span {
+  color: white;
+  font-size: 14px;
+}
+
+.DeleteButton {
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(255, 77, 77, 0.8);
+  color: white;
+  border: 1px solid rgba(255, 77, 77, 1);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-top: 12px;
+}
+
+.DeleteButton:hover {
+  background-color: rgba(255, 77, 77, 1);
+  border-color: rgba(255, 77, 77, 1);
+}
+
+.CloseButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.CloseButton:hover {
+  color: #ff6b6b;
+}
+
+.CoordinateDisplay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 12px 16px;
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Courier New', monospace;
+}
+
+.CoordinateRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.CoordinateRow:last-child {
+  margin-bottom: 0;
+}
+
+.CoordinateLabel {
+  color: rgba(255, 255, 255, 0.7);
+  min-width: 60px;
+}
+
+.CoordinateValue {
+  color: white;
+  font-weight: 500;
+}
+

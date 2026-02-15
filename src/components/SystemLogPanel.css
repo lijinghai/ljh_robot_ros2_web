@@ -1,0 +1,142 @@
+.SystemLogPanel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: rgba(15, 18, 25, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  z-index: 20;
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.SystemLogPanel.expanded {
+  height: 200px;
+}
+
+.LogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+
+.LogHeader:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.LogHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.LogIcon {
+  font-size: 16px;
+}
+
+.LogTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.LogCount {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.LogHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ClearLogButton {
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ClearLogButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.ExpandIcon {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s;
+}
+
+.LogContainer {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 8px 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.LogContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.LogContainer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.LogContainer::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.LogContainer::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.EmptyLogs {
+  padding: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.LogEntry {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+  color: rgba(255, 255, 255, 0.8);
+  word-break: break-word;
+}
+
+.LogTime {
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.LogLevel {
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 60px;
+}
+
+.LogMessage {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.9);
+}
+

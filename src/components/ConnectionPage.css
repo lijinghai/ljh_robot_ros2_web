@@ -1,0 +1,161 @@
+.ConnectionPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(88, 101, 242, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(235, 69, 158, 0.15), transparent 40%),
+    linear-gradient(135deg, #0f1219 0%, #151b26 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ConnectionForm {
+  width: 440px;
+  background: rgba(22, 27, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  padding: 40px 36px;
+  color: #eaf2ff;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s ease;
+}
+
+.ConnectionForm:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 30px 60px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.ConnectionBrand {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #fff;
+  font-family: "Songti SC", "Noto Serif SC", "SimSun", serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.ConnectionBrand::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a5b4fc, transparent);
+  opacity: 0.6;
+}
+
+.ConnectionForm h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ConnectionDesc {
+  margin: 0 0 32px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+.FormGroup {
+  margin-bottom: 20px;
+}
+
+.FormGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 500;
+  padding-left: 4px;
+}
+
+.FormGroup input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.FormGroup input:focus {
+  border-color: rgba(165, 180, 252, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.1);
+}
+
+.FormGroup input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Error {
+  color: #ff9fb0;
+  margin: 0 0 20px;
+  padding: 12px;
+  background: rgba(255, 87, 115, 0.1);
+  border: 1px solid rgba(255, 129, 153, 0.2);
+  border-radius: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.ConnectionForm button {
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  color: #0f1219;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.ConnectionForm button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+  background: #f0f0f0;
+}
+
+.ConnectionForm button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ConnectionForm button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
