@@ -152,7 +152,7 @@
 1. **克隆仓库**
 
    ```bash
-   git clone https://github.com/lijinghai/ljh_robot_web.git
+   git clone https://github.com/lijinghai/ljh_robot_ros2_web.git
    cd ljh_robot_web
    ```
 
@@ -268,7 +268,7 @@ ros2 run rosbridge_server rosbridge_websocket
 ## 📁 项目结构
 
 ```
-ljh_robot_web/
+ljh_robot_ros2_web/
 ├── src/
 │   ├── components/          # React 组件
 │   │   ├── layers/         # 图层组件
