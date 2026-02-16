@@ -1,30 +1,42 @@
-## 🎯 项目简介
-
 <div align="center">
 
-### 算个文科生吧 · AMR 控制台
+# 🤖 算个文科生吧 · AMR 控制台
+
+**基于 Web 技术的机器人控制与可视化平台**
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-19.2.0-61dafb?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178c6?logo=typescript)](https://www.typescriptlang.org/)
 
 </div>
 
+---
+
+## 🎯 项目简介
+
 **AMR 控制台** 是一个基于 Web 技术的机器人控制与可视化平台，专为自主移动机器人（AMR）设计。通过 WebSocket 连接 ROS 系统，提供实时 3D 可视化、地图编辑、导航控制、任务管理等核心功能，让机器人操作变得直观高效。
 
-### 核心优势
+### ✨ 核心优势
 
-- 🌐 **零安装部署** - 纯 Web 应用，无需安装客户端
-- 🎨 **现代化 UI** - 基于 React 19 构建的响应式界面
-- 🚀 **高性能渲染** - Three.js 驱动的实时 3D 可视化
-- 🔌 **ROS 集成** - 完整的 ROS/ROS2 消息支持
-- 🎛️ **灵活配置** - 可自定义的图层系统和主题
+| 特性 | 说明 |
+|:----:|:----|
+| 🌐 **零安装部署** | 纯 Web 应用，无需安装客户端 |
+| 🎨 **现代化 UI** | 基于 React 19 构建的响应式界面 |
+| 🚀 **高性能渲染** | Three.js 驱动的实时 3D 可视化 |
+| 🔌 **ROS 集成** | 完整的 ROS/ROS2 消息支持 |
+| 🎛️ **灵活配置** | 可自定义的图层系统和主题 |
 
-### 界面预览
+---
 
-#### 登录页面
+## 📸 界面预览
+
+### 登录页面
 
 <div align="center">
   <img src="public/登录页面.png" alt="登录页面" width="80%"/>
 </div>
 
-#### 主界面
+### 主界面
 
 <div align="center">
   <img src="public/首页.png" alt="主界面" width="80%"/>
@@ -61,6 +73,40 @@
 <div align="center">
   <img src="public/web端导航.png" alt="Web端导航" width="80%"/>
   <p><em>Web端导航界面</em></p>
+</div>
+
+#### 单点导航
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="public/单点导航.png" alt="单点导航 - Web端" width="100%"/>
+        <p><em>Web端单点导航</em></p>
+      </td>
+      <td align="center">
+        <img src="public/单点导航_rviz.png" alt="单点导航 - RViz" width="100%"/>
+        <p><em>RViz单点导航对比</em></p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+#### 多点导航
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="public/多点导航.png" alt="多点导航 - Web端" width="100%"/>
+        <p><em>Web端多点导航</em></p>
+      </td>
+      <td align="center">
+        <img src="public/多点导航_rviz.png" alt="多点导航 - RViz" width="100%"/>
+        <p><em>RViz多点导航对比</em></p>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ### 📝 地图编辑
@@ -149,28 +195,28 @@
 
 ### 安装步骤
 
-1. **克隆仓库**
+#### 1. 克隆仓库
 
-   ```bash
-   git clone https://github.com/lijinghai/ljh_robot_ros2_web.git
-   cd ljh_robot_ros2_web
-   ```
+```bash
+git clone https://github.com/lijinghai/ljh_robot_ros2_web.git
+cd ljh_robot_ros2_web
+```
 
-2. **安装依赖**
+#### 2. 安装依赖
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-3. **启动开发服务器**
+#### 3. 启动开发服务器
 
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
-4. **访问应用**
+#### 4. 访问应用
 
-   打开浏览器访问 `http://localhost:5173`
+打开浏览器访问 `http://localhost:5173`
 
 ### ROS 环境配置
 
@@ -184,7 +230,7 @@ rosrun rosbridge_server rosbridge_websocket
 ros2 run rosbridge_server rosbridge_websocket
 ```
 
-默认 WebSocket 地址：`ws://localhost:9090`
+> 💡 **提示**: 默认 WebSocket 地址：`ws://localhost:9090`
 
 ---
 
@@ -209,40 +255,6 @@ ros2 run rosbridge_server rosbridge_websocket
 2. 在地图上点击目标位置
 3. 或使用导航面板输入坐标
 4. 机器人将自动规划路径并导航到目标点
-
-#### 单点导航
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="public/单点导航.png" alt="单点导航 - Web端" width="100%"/>
-        <p><em>Web端单点导航</em></p>
-      </td>
-      <td align="center">
-        <img src="public/单点导航_rviz.png" alt="单点导航 - RViz" width="100%"/>
-        <p><em>RViz单点导航对比</em></p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-#### 多点导航
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="public/多点导航.png" alt="多点导航 - Web端" width="100%"/>
-        <p><em>Web端多点导航</em></p>
-      </td>
-      <td align="center">
-        <img src="public/多点导航_rviz.png" alt="多点导航 - RViz" width="100%"/>
-        <p><em>RViz多点导航对比</em></p>
-      </td>
-    </tr>
-  </table>
-</div>
 
 ### 手动控制
 
@@ -295,7 +307,6 @@ ljh_robot_ros2_web/
 │   ├── App.tsx             # 主应用组件
 │   └── main.tsx            # 入口文件
 ├── public/                 # 静态资源
-├── doc/                    # 文档和图片
 ├── package.json
 ├── vite.config.ts
 └── tsconfig.json
@@ -303,11 +314,13 @@ ljh_robot_ros2_web/
 
 ### 关键文件说明
 
-- **`src/App.tsx`** - 应用根组件，管理连接状态和路由
-- **`src/components/MapView.tsx`** - 主视图组件，包含 3D 场景和所有控制面板
-- **`src/utils/RosbridgeConnection.ts`** - ROS 连接封装类
-- **`src/utils/tf2js.ts`** - TF 变换管理工具
-- **`src/components/layers/LayerManager.tsx`** - 图层管理器
+| 文件 | 说明 |
+|:----:|:----|
+| `src/App.tsx` | 应用根组件，管理连接状态和路由 |
+| `src/components/MapView.tsx` | 主视图组件，包含 3D 场景和所有控制面板 |
+| `src/utils/RosbridgeConnection.ts` | ROS 连接封装类 |
+| `src/utils/tf2js.ts` | TF 变换管理工具 |
+| `src/components/layers/LayerManager.tsx` | 图层管理器 |
 
 ---
 
@@ -344,16 +357,16 @@ npm run lint
 
 ### 代码规范
 
-- 使用 TypeScript 严格模式
-- 遵循 ESLint 规则
-- 组件使用函数式组件和 Hooks
-- 使用有意义的变量和函数命名
+- ✅ 使用 TypeScript 严格模式
+- ✅ 遵循 ESLint 规则
+- ✅ 组件使用函数式组件和 Hooks
+- ✅ 使用有意义的变量和函数命名
 
 ### 调试技巧
 
-- 使用浏览器开发者工具查看 WebSocket 消息
-- 检查控制台日志了解图层状态
-- 使用 React DevTools 调试组件状态
+- 🔍 使用浏览器开发者工具查看 WebSocket 消息
+- 📊 检查控制台日志了解图层状态
+- ⚛️ 使用 React DevTools 调试组件状态
 
 ---
 
@@ -363,8 +376,8 @@ npm run lint
 
 开发服务器默认配置：
 
-- 主机：`0.0.0.0`（允许外部访问）
-- 端口：`5173`
+- **主机**：`0.0.0.0`（允许外部访问）
+- **端口**：`5173`
 
 可在 `vite.config.ts` 中修改。
 
@@ -383,11 +396,13 @@ npm run lint
 
 欢迎提交 Issue 和 Pull Request！
 
-1. Fork 本仓库
+### 贡献流程
+
+1. **Fork** 本仓库
 2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
 3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+5. 开启 **Pull Request**
 
 ---
 
@@ -405,6 +420,8 @@ npm run lint
 
 ## 🙏 致谢
 
+感谢以下优秀的开源项目：
+
 - [ROS](https://www.ros.org/) - 机器人操作系统
 - [Three.js](https://threejs.org/) - 3D 图形库
 - [React](https://react.dev/) - UI 框架
@@ -420,6 +437,6 @@ npm run lint
 
 **Made with ❤️ for Robotics**
 
-[返回顶部](#ljh_robot_web)
+[⬆ 返回顶部](#-算个文科生吧--amr-控制台)
 
 </div>
