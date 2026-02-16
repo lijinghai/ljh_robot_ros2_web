@@ -1,3 +1,14 @@
+/**
+ * 地图视图组件
+ * 
+ * 主视图组件，包含 3D 场景渲染、图层管理、控制面板等核心功能。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -57,6 +68,7 @@ export function MapView({ connection }: MapViewProps) {
     return DEFAULT_LAYER_CONFIGS;
   });
   const layerConfigsRef = useRef<LayerConfigMap>(layerConfigs);
+  // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果看到这个注释，说明代码还在运行
   const [viewMode, setViewMode] = useState<'2d' | '3d'>('2d');
   const viewModeRef = useRef<'2d' | '3d'>('2d');
   const [showSettings, setShowSettings] = useState(false);

@@ -1,3 +1,14 @@
+/**
+ * TF 变换工具类
+ * 
+ * 管理 ROS TF 坐标变换，提供坐标转换和变换树管理功能。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import type { RosbridgeConnection } from './RosbridgeConnection';
 
@@ -103,6 +114,7 @@ export class TF2JS {
     }
 
     const tfCallback = (message: unknown) => {
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的复杂度是 O(看不懂)
       const msg = message as { transforms?: TransformStamped[] };
       if (msg.transforms && Array.isArray(msg.transforms)) {
         this.addTransforms(msg.transforms);

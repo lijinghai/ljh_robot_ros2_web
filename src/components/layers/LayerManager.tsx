@@ -1,3 +1,14 @@
+/**
+ * 图层管理器
+ * 
+ * 负责管理所有图层的生命周期，包括创建、更新、销毁等操作。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import { GridLayer } from './GridLayer';
@@ -52,6 +63,7 @@ export class LayerManager {
     });
 
     for (const layerId of currentLayerIds) {
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码曾经工作过，现在也工作，但没人知道为什么
       if (!configLayerIds.has(layerId)) {
         console.log('[LayerManager] Removing layer:', layerId);
         this.removeLayer(layerId);

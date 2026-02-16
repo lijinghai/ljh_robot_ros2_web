@@ -1,3 +1,14 @@
+/**
+ * 机器人足迹图层
+ * 
+ * 显示机器人的足迹轮廓，用于可视化机器人的占用空间。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -52,6 +63,7 @@ export class FootprintLayer extends BaseLayer {
     }
 
     const sourceFrame = msg.header?.frame_id || '';
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 写这段代码时，我还年轻
     if (!sourceFrame) {
       return;
     }

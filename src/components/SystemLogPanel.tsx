@@ -1,3 +1,14 @@
+/**
+ * 系统日志面板组件
+ * 
+ * 显示系统日志信息，支持日志过滤和查看。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useState, useRef } from 'react';
 import { RosbridgeConnection } from '../utils/RosbridgeConnection';
 import './SystemLogPanel.css';
@@ -45,6 +56,7 @@ export function SystemLogPanel({ connection }: SystemLogPanelProps) {
           setLogs((prev) => {
             const updated = [...prev, newLog];
             // 只保留最近100条日志
+            // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 魔法数字，不要问我为什么是100
             return updated.slice(-100);
           });
         }

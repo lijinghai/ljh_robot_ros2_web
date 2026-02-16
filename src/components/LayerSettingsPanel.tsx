@@ -1,3 +1,14 @@
+/**
+ * 图层设置面板组件
+ * 
+ * 提供图层配置界面，支持图层启用/禁用、颜色、透明度等参数设置。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useState, useEffect, useRef } from 'react';
 import { toast } from 'react-toastify';
 import JSZip from 'jszip';
@@ -107,6 +118,7 @@ export function LayerSettingsPanel({ layerConfigs, onConfigChange, onResetToDefa
     
     // 如果当前 enabledFrames 为空（表示显示所有），且用户要取消某个坐标系
     // 需要先将所有当前显示的坐标系添加到 enabledFrames 中
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码写于凌晨3点，如有bug请理解
     if (enabledFrames.size === 0 && !enabled) {
       enabledFrames = new Set(tfFrames);
       console.log('[LayerSettingsPanel] Initializing enabledFrames with all frames:', Array.from(enabledFrames));

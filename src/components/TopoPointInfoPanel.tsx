@@ -1,3 +1,14 @@
+/**
+ * 拓扑点信息面板组件
+ * 
+ * 显示和管理拓扑地图中的节点信息。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { RosbridgeConnection } from '../utils/RosbridgeConnection';
 import { toast } from 'react-toastify';
 import * as THREE from 'three';
@@ -38,6 +49,7 @@ export function TopoPointInfoPanel({
     }
 
     const quaternion = new THREE.Quaternion();
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码出问题，请重启电脑
     quaternion.setFromAxisAngle(new THREE.Vector3(0, 0, 1), selectedPoint.theta);
 
     const message = {

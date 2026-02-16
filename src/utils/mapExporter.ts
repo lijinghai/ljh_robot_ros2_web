@@ -1,3 +1,14 @@
+/**
+ * 地图导出工具
+ * 
+ * 提供地图导出功能，支持将地图数据导出为 ZIP 文件。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import JSZip from 'jszip';
 import type { TopologyMap } from './MapManager';
 
@@ -33,6 +44,7 @@ export async function exportMap(
   const zip = new JSZip();
 
   if (occupancyGrid) {
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码通过了所有测试，除了生产环境
     const pgmData = generatePGM(occupancyGrid);
     const yamlContent = generateYAML(occupancyGrid, mapName);
     

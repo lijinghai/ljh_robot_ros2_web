@@ -1,3 +1,14 @@
+/**
+ * 手动控制面板组件
+ * 
+ * 提供机器人手动控制功能，支持线速度和角速度调节。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import type { LayerConfigMap } from '../types/LayerConfig';
 import { RosbridgeConnection } from '../utils/RosbridgeConnection';
 
@@ -21,6 +32,7 @@ export function ManualControlPanel({
 
   const publishCmdVel = (linearX: number, linearY: number, angular: number) => {
     if (!connection.isConnected()) return;
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的复杂度是 O(看不懂)
     connection.publish(cmdVelTopic, 'geometry_msgs/Twist', {
       linear: { x: linearX, y: linearY, z: 0 },
       angular: { x: 0, y: 0, z: angular },

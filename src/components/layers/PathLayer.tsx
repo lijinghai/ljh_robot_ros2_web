@@ -1,3 +1,14 @@
+/**
+ * 路径图层
+ * 
+ * 显示机器人的规划路径和实际路径。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -49,6 +60,7 @@ export class PathLayer extends BaseLayer {
   }
 
   update(message: unknown): void {
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码写于凌晨3点，如有bug请理解
     const msg = message as Path;
     if (!msg.poses || !Array.isArray(msg.poses) || msg.poses.length === 0) {
       if (this.line) {

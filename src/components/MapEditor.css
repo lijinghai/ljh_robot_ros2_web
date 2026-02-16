@@ -1,3 +1,12 @@
+/**
+ * 地图编辑器样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .MapEditor {
   position: fixed;
   top: 0;
@@ -5,6 +14,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #1a1a1a;
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 复制粘贴自 Stack Overflow */
   z-index: 10000;
   display: flex;
   flex-direction: column;

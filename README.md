@@ -153,7 +153,7 @@
 
    ```bash
    git clone https://github.com/lijinghai/ljh_robot_ros2_web.git
-   cd ljh_robot_web
+   cd ljh_robot_ros2_web
    ```
 
 2. **安装依赖**
@@ -393,7 +393,7 @@ npm run lint
 
 ## 📊 Star 历史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=lijinghai/ljh_robot_web&type=Date)](https://star-history.com/#lijinghai/ljh_robot_web&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=lijinghai/ljh_robot_ros2_web&type=Date)](https://star-history.com/#lijinghai/ljh_robot_ros2_web&Date)
 
 ---
 

@@ -1,3 +1,14 @@
+/**
+ * 任务管理面板组件
+ * 
+ * 提供任务创建、执行和监控功能。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useState } from 'react';
 import { RosbridgeConnection } from '../utils/RosbridgeConnection';
 import type { NavigationPoint } from './NavigationPanel';
@@ -50,6 +61,7 @@ export function TaskManagementPanel({
     });
 
     // 更新已完成的任务状态
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这里曾经有个bug，现在可能还有
     setTasks((prevTasks) => {
       return newTasks.map((newTask) => {
         const prevTask = prevTasks.find((t) => t.id === newTask.id);

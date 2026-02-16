@@ -1,3 +1,14 @@
+/**
+ * 视图模式 Hook
+ * 
+ * 管理 2D/3D 视图切换和相机控制。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect } from 'react';
 import * as THREE from 'three';
 import type { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -20,6 +31,7 @@ export function useViewMode(
     const camera = cameraRef.current;
 
     if (viewMode === '2d') {
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 复制粘贴自 Stack Overflow
       controls.enableRotate = false;
       controls.enableZoom = true;
       controls.enablePan = true;

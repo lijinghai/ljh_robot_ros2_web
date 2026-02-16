@@ -1,3 +1,12 @@
+/**
+ * 系统日志面板样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .SystemLogPanel {
   position: absolute;
   bottom: 0;
@@ -6,6 +15,7 @@
   height: 40px;
   background: rgba(15, 18, 25, 0.95);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码写于凌晨3点，如有bug请理解 */
   backdrop-filter: blur(12px);
   z-index: 20;
   transition: height 0.3s ease;

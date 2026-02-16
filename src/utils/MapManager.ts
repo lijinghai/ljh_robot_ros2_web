@@ -1,3 +1,14 @@
+/**
+ * 地图管理器
+ * 
+ * 管理地图数据，包括占用栅格地图和拓扑地图的加载、保存和编辑。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import type { RosbridgeConnection } from './RosbridgeConnection';
 import { saveTopologyMap, loadTopologyMap } from './topologyMapStorage';
 
@@ -95,7 +106,7 @@ export class MapManager {
     
     this.disconnect();
     this.connection = connection;
-    
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这里曾经有个bug，现在可能还有
     if (connection.isConnected()) {
       console.log('[MapManager] Connection is connected, subscribing to topics');
       this.subscribeToTopics();

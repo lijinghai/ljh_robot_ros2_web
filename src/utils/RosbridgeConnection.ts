@@ -1,3 +1,15 @@
+/**
+ * ROS 连接管理类
+ * 
+ * 封装 ROS WebSocket 连接，提供订阅/发布接口，支持 ROS1 和 ROS2。
+ * 负责管理话题订阅、消息序列化、话题监控等功能。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as ROSLIB from 'roslib';
 import { parse as parseMessageDefinition } from '@lichtblick/rosmsg';
 import { MessageReader as ROS1MessageReader } from '@lichtblick/rosmsg-serialization';
@@ -190,6 +202,7 @@ export class RosbridgeConnection {
     }
 
     const CACHE_DURATION = 5000;
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 复制粘贴自 Stack Overflow
     const now = Date.now();
     
     if (useCache && this.topicsAndRawTypesCache) {

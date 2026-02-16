@@ -1,3 +1,14 @@
+/**
+ * URDF 文件存储工具
+ * 
+ * 使用 IndexedDB 存储和管理 URDF 文件。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 const DB_NAME = 'ros_web_gui_urdf_db';
 const DB_VERSION = 1;
 const STORE_NAME = 'urdf_files';
@@ -22,6 +33,7 @@ function openDatabase(): Promise<IDBDatabase> {
     };
 
     request.onupgradeneeded = (event) => {
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码能跑，就不要动它
       const db = (event.target as IDBOpenDBRequest).result;
       if (!db.objectStoreNames.contains(STORE_NAME)) {
         db.createObjectStore(STORE_NAME);

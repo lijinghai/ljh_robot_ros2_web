@@ -1,3 +1,14 @@
+/**
+ * 图像显示组件
+ * 
+ * 用于显示从 ROS 话题接收的图像数据。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useRef } from 'react';
 import type { ImageLayerData } from './layers/ImageLayer';
 
@@ -45,6 +56,7 @@ export function ImageDisplay({ imageData, name, position, onPositionChange }: Im
         const direction = deltaX + deltaY > 0 ? 1 : -1;
         const scaleDelta = (distance * direction) / 200;
         const newScale = Math.max(0.1, Math.min(5, resizeStartRef.current.scale + scaleDelta));
+        // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 注释比代码还长系列
         onPositionChange({
           x: position.x,
           y: position.y,

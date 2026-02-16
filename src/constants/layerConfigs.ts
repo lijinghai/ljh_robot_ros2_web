@@ -1,3 +1,14 @@
+/**
+ * 默认图层配置
+ * 
+ * 定义所有图层的默认配置参数。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import type { LayerConfigMap } from '../types/LayerConfig';
 
 export const DEFAULT_LAYER_CONFIGS: LayerConfigMap = {
@@ -25,6 +36,7 @@ export const DEFAULT_LAYER_CONFIGS: LayerConfigMap = {
     enabled: true,
     colorMode: 'costmap',
     alpha: 0.7,
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果看到这个注释，说明代码还在运行
     height: 0.02,
   },
   global_costmap: {

@@ -1,3 +1,12 @@
+/**
+ * 连接页面样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .ConnectionPage {
   display: flex;
   justify-content: center;
@@ -7,6 +16,7 @@
     radial-gradient(circle at 10% 20%, rgba(88, 101, 242, 0.15), transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(235, 69, 158, 0.15), transparent 40%),
     linear-gradient(135deg, #0f1219 0%, #151b26 100%);
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 写这段代码时，我还年轻 */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 

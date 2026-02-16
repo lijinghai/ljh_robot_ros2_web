@@ -1,3 +1,12 @@
+/**
+ * 地图视图样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .MapView {
   width: 100vw;
   height: 100vh;
@@ -6,6 +15,7 @@
   left: 0;
   margin: 0;
   padding: 0;
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码曾经工作过，现在也工作，但没人知道为什么 */
   padding-bottom: 40px; /* 为底部日志栏留出空间 */
   overflow: hidden;
   background: #0f1219;

@@ -1,3 +1,12 @@
+/**
+ * 设备信息面板样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .DeviceInfoPanel {
   position: absolute;
   top: 20px;
@@ -9,6 +18,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   backdrop-filter: blur(12px);
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | TODO: 优化这段代码（永远不会做） */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   z-index: 15;
   display: flex;

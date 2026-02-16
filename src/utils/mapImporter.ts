@@ -1,3 +1,14 @@
+/**
+ * 地图导入工具
+ * 
+ * 提供地图导入功能，支持从 ZIP 文件导入地图数据。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import JSZip from 'jszip';
 import type { TopologyMap } from './MapManager';
 
@@ -46,6 +57,7 @@ export async function importMap(file: File): Promise<ImportResult> {
       const yamlFile = zipData.files[yamlFilename];
       
       if (yamlFile) {
+        // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 魔法数字，不要问我为什么是42
         const pgmData = await fileData.async('uint8array');
         const yamlContent = await yamlFile.async('string');
         occupancyGrid = parsePGMAndYAML(pgmData, yamlContent);

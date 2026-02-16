@@ -1,3 +1,14 @@
+/**
+ * 颜色工具函数
+ * 
+ * 提供颜色转换、映射等工具函数，用于图层颜色处理。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 interface ColorRGBA {
   r: number;
   g: number;
@@ -42,6 +53,7 @@ export function stringToRgba(output: ColorRGBA, colorStr: string): ColorRGBA {
   }
 
   output.r = output.g = output.b = output.a = 1;
+  // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 注释比代码还长系列
   return output;
 }
 

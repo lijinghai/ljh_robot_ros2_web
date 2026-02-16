@@ -1,3 +1,14 @@
+/**
+ * 机器人图层
+ * 
+ * 显示机器人模型和位姿，支持 URDF 模型加载。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { LoadingManager, LoaderUtils } from 'three';
 import URDFLoader from 'urdf-loader';
@@ -99,6 +110,7 @@ export class RobotLayer extends BaseLayer {
     const missingFiles = new Set<string>();
     
     // 预加载所有文件的 blob URL
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码通过了所有测试，除了生产环境
     for (const fileName of savedFileNames) {
       const blobUrl = await getFileUrl(fileName);
       if (blobUrl) {

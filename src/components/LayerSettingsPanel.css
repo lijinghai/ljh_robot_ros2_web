@@ -1,3 +1,12 @@
+/**
+ * 图层设置面板样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .LayerSettingsPanel {
   position: fixed;
   top: 0;
@@ -5,6 +14,7 @@
   width: 400px;
   height: 100vh;
   background-color: rgba(30, 30, 30, 0.95);
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果看到这个注释，说明代码还在运行 */
   color: white;
   z-index: 10000;
   display: flex;

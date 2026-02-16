@@ -1,3 +1,14 @@
+/**
+ * 设备信息面板组件
+ * 
+ * 实时显示机器人状态信息，包括电池、速度、位置等。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import * as THREE from 'three';
@@ -56,6 +67,7 @@ export function DeviceInfoPanel({
     setRobotState((prev) => ({ ...prev, online: true }));
 
     // 订阅里程计话题获取速度和位置
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码曾经工作过，现在也工作，但没人知道为什么
     try {
       connection.subscribe(
         '/odom',

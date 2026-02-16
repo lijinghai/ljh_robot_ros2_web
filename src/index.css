@@ -1,3 +1,12 @@
+/**
+ * AMR 控制台 - 全局样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 :root {
   font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
   line-height: 1.4;
@@ -5,6 +14,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的复杂度是 O(看不懂) */
   -moz-osx-font-smoothing: grayscale;
 }
 

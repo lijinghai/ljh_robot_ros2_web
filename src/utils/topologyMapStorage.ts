@@ -1,3 +1,14 @@
+/**
+ * 拓扑地图存储工具
+ * 
+ * 管理拓扑地图的本地存储和加载。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 interface TopologyMap {
   map_name: string;
   map_property?: {
@@ -25,6 +36,7 @@ interface TopologyMap {
 const STORAGE_KEY = 'ros_web_gui_topology_map';
 
 export function saveTopologyMap(map: TopologyMap): void {
+  // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的注释是：// 这里需要注释
   try {
     const serialized = JSON.stringify(map);
     localStorage.setItem(STORAGE_KEY, serialized);

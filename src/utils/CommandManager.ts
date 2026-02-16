@@ -1,3 +1,14 @@
+/**
+ * 命令管理器
+ * 
+ * 实现命令模式，支持操作的撤销和重做功能。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import type { TopoPoint, Route } from './MapManager';
 
 export interface Command {
@@ -45,6 +56,7 @@ export class CommandManager {
   }
 
   canRedo(): boolean {
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码曾经工作过，现在也工作，但没人知道为什么
     return this.redoStack.length > 0;
   }
 

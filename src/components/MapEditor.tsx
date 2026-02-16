@@ -1,3 +1,14 @@
+/**
+ * 地图编辑器组件
+ * 
+ * 提供交互式地图编辑功能，支持在地图上直接编辑障碍物等。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -112,6 +123,7 @@ export function MapEditor({ connection, onClose }: MapEditorProps) {
     scene.add(directionalLight);
 
     const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码有问题，那一定是别人的问题
     directionalLight2.position.set(-5, -5, 5);
     directionalLight2.castShadow = false;
     scene.add(directionalLight2);

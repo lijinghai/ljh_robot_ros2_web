@@ -1,3 +1,14 @@
+/**
+ * 基础图层类
+ * 
+ * 所有图层的基类，定义了图层的通用接口和生命周期方法。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import type { LayerConfig } from '../../types/LayerConfig';
 import type { RosbridgeConnection } from '../../utils/RosbridgeConnection';
@@ -47,6 +58,7 @@ export abstract class BaseLayer implements LayerRenderable {
     console.log(`[${this.constructor.name}] Subscribing to topic: ${topic}, messageType: ${finalMessageType}`);
 
     const callback = (message: unknown) => {
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的注释是：// 这里需要注释
       if (this.config.enabled) {
         this.update(message);
         const obj3D = this.getObject3D();

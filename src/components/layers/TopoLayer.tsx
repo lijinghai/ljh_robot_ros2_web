@@ -1,3 +1,14 @@
+/**
+ * 拓扑地图图层
+ * 
+ * 显示和管理拓扑地图，支持拓扑节点的创建和编辑。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -99,6 +110,7 @@ export class TopoLayer extends BaseLayer {
     }
 
     const centerPulse = 1.0 + 0.1 * Math.sin(this.animationValue * 4 * Math.PI);
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这里曾经有个bug，现在可能还有
     const centerOpacity = 0.8 + 0.2 * Math.sin(this.animationValue * 2 * Math.PI);
     const centerGeometry = this.createCubeGeometry(this.pointSize / 3, cubeHeight / 3);
     const centerMaterial = new THREE.MeshBasicMaterial({

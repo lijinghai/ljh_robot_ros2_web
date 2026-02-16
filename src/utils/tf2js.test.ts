@@ -1,6 +1,18 @@
+/**
+ * TF 变换工具测试文件
+ * 
+ * 对 TF2JS 类进行单元测试。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { describe, it, expect, beforeEach } from 'vitest';
 import { TF2JS, type TransformStamped } from './tf2js';
 
+// 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码通过了所有测试，除了生产环境
 describe('TF2JS transformPointsToFrame', () => {
   let tf2js: TF2JS;
 

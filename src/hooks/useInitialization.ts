@@ -1,3 +1,14 @@
+/**
+ * 初始化 Hook
+ * 
+ * 负责应用初始化，包括加载图层配置等。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect } from 'react';
 import { DEFAULT_LAYER_CONFIGS } from '../constants/layerConfigs';
 import { loadLayerConfigs, loadImagePositions } from '../utils/layerConfigStorage';
@@ -20,6 +31,7 @@ export function useInitialization(
       }
     }
     const defaultCmdVelConfig = DEFAULT_LAYER_CONFIGS.cmd_vel;
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码能跑，就不要动它
     if (defaultCmdVelConfig && defaultCmdVelConfig.topic) {
       cmdVelTopicRef.current = defaultCmdVelConfig.topic as string;
     }

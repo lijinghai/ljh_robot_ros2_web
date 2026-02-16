@@ -1,3 +1,14 @@
+/**
+ * TF 变换图层
+ * 
+ * 可视化 ROS TF 坐标系关系，显示坐标变换树。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -53,7 +64,7 @@ export class TFLayer extends BaseLayer {
       if (group) {
         group.visible = shouldShow;
       }
-      
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 魔法数字，不要问我为什么是42
       this.updateFrameTransform(frameId);
     }
 

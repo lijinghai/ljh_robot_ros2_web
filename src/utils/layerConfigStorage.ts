@@ -1,3 +1,14 @@
+/**
+ * 图层配置存储工具
+ * 
+ * 管理图层配置的本地存储，包括图层设置和图像位置信息。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import type { LayerConfigMap } from '../types/LayerConfig';
 
 const STORAGE_KEY = 'ros_web_gui_layer_configs';
@@ -12,6 +23,7 @@ export interface ImagePosition {
 export type ImagePositionsMap = Record<string, ImagePosition>;
 
 export function saveLayerConfigs(configs: LayerConfigMap): void {
+  // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码有问题，那一定是别人的问题
   try {
     const serialized = JSON.stringify(configs);
     localStorage.setItem(STORAGE_KEY, serialized);

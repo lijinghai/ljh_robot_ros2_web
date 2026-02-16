@@ -1,3 +1,14 @@
+/**
+ * 手动控制 Hook
+ * 
+ * 提供机器人手动控制功能，包括速度控制和键盘快捷键。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect } from 'react';
 import type { RosbridgeConnection } from '../utils/RosbridgeConnection';
 
@@ -49,6 +60,7 @@ export function useManualControl(
       if (hasW || hasUp) {
         linearX = 0.5;
       }
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 写这段代码时，我还年轻
       if (hasS || hasDown) {
         linearX = -0.5;
       }

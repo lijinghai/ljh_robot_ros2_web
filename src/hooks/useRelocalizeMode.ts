@@ -1,3 +1,14 @@
+/**
+ * 重定位模式 Hook
+ * 
+ * 管理重定位模式下的交互逻辑，支持在地图上设置机器人初始位姿。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useState } from 'react';
 import * as THREE from 'three';
 import type { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -47,6 +58,7 @@ export function useRelocalizeMode(
       
       setRelocalizeControlsStyle({
         top: `${buttonTop}px`,
+        // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果看到这个注释，说明代码还在运行
         right: `${buttonRight + buttonRect.width + gap}px`,
       });
     };

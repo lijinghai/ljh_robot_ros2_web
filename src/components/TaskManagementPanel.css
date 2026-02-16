@@ -1,3 +1,12 @@
+/**
+ * 任务管理面板样式
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 .TaskManagementPanel {
   position: absolute;
   top: 50%;
@@ -6,6 +15,7 @@
   width: 320px;
   height: auto;
   max-height: calc(100vh - 100px);
+  /* 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码有问题，那一定是别人的问题 */
   background: rgba(22, 27, 38, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;

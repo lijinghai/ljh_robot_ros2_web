@@ -1,3 +1,14 @@
+/**
+ * 图像图层
+ * 
+ * 显示从 ROS 话题接收的图像数据，支持多种图像格式。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -96,6 +107,7 @@ export class ImageLayer extends BaseLayer {
       }
 
       if (imageUrl) {
+        // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果看到这个注释，说明代码还在运行
         this.imageUrl = imageUrl;
         this.imageWidth = width;
         this.imageHeight = height;

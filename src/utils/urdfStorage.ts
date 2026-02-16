@@ -1,3 +1,14 @@
+/**
+ * URDF 配置存储工具
+ * 
+ * 管理 URDF 配置的本地存储，包括 URDF 文件列表和当前使用的配置。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 const URDF_CONFIGS_KEY = 'ros_web_gui_urdf_configs';
 const URDF_CURRENT_KEY = 'ros_web_gui_urdf_current';
 
@@ -28,6 +39,7 @@ function migrateOldConfig(): UrdfConfigs | null {
       
       localStorage.removeItem('ros_web_gui_urdf_path');
       localStorage.removeItem('ros_web_gui_urdf_packages');
+      // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的复杂度是 O(看不懂)
       localStorage.removeItem('ros_web_gui_urdf_file');
       
       return {

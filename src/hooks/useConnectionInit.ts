@@ -1,3 +1,14 @@
+/**
+ * 连接初始化 Hook
+ * 
+ * 负责初始化 ROS 连接、TF 系统和地图管理器。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import type { RosbridgeConnection } from '../utils/RosbridgeConnection';
@@ -22,6 +33,7 @@ export function useConnectionInit(
           hasConnection: !!connection, 
           isConnected: connection.isConnected() 
         });
+        // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码能跑，就不要动它
         const mapManager = MapManager.getInstance();
         mapManager.initialize(connection);
         

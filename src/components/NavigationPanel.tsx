@@ -1,3 +1,14 @@
+/**
+ * 导航控制面板组件
+ * 
+ * 提供导航功能，支持目标点导航、路径规划等。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import * as THREE from 'three';
@@ -32,6 +43,7 @@ export function NavigationPanel({
 }: NavigationPanelProps) {
 
   const formatTheta = (theta: number): string => {
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码通过了所有测试，除了生产环境
     const degrees = ((theta * 180) / Math.PI).toFixed(1);
     return `${degrees}°`;
   };

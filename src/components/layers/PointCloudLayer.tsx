@@ -1,3 +1,14 @@
+/**
+ * 点云图层
+ * 
+ * 可视化点云数据，支持多种点云格式。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -55,6 +66,7 @@ export class PointCloudLayer extends BaseLayer {
     this.tf2js = TF2JS.getInstance();
     this.targetFrame = (config.targetFrame as string | undefined) || 'map';
     this.pointSize = (config.pointSize as number | undefined) ?? 0.06;
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码有问题，那一定是别人的问题
     this.color = (config.color as number | undefined) ?? 0xff00ff;
     this.decimation = Math.max(1, Math.floor((config.decimation as number | undefined) ?? 4));
     this.warnedTransformMissing = false;

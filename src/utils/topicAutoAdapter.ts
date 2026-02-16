@@ -1,3 +1,14 @@
+/**
+ * 话题自动适配工具
+ * 
+ * 自动检测可用的 ROS 话题并配置相应的图层。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import type { LayerConfigMap } from '../types/LayerConfig';
 
 function updateLayer(
@@ -35,6 +46,7 @@ function chooseTopic(
     return currentTopic;
   }
   for (const candidate of candidates) {
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 如果这段代码出问题，请重启电脑
     if (topicSet.has(candidate)) {
       return candidate;
     }

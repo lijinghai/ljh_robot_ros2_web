@@ -1,3 +1,14 @@
+/**
+ * 图像图层管理 Hook
+ * 
+ * 管理图像图层的显示和位置信息。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useState } from 'react';
 import type { LayerConfigMap } from '../types/LayerConfig';
 import type { ImageLayerData } from '../components/layers/ImageLayer';
@@ -28,6 +39,7 @@ export function useImageLayers(
             if (savedPosition) {
               imagePositionsRef.current.set(matchingLayerId, savedPosition);
             } else {
+              // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 这段代码的注释是：// 这里需要注释
               imagePositionsRef.current.set(matchingLayerId, { x: 100, y: 100, scale: 1 });
             }
           }

@@ -1,3 +1,14 @@
+/**
+ * 占用栅格地图图层
+ * 
+ * 显示占用栅格地图，用于导航和路径规划。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -54,6 +65,7 @@ export class OccupancyGridLayer extends BaseLayer {
       alpha: (config.alpha as number | undefined) ?? 1.0,
       height: (config.height as number | undefined) ?? 0,
     };
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 注释比代码还长系列
     this.mapManager = MapManager.getInstance();
     
     console.log('[OccupancyGridLayer] Constructor', { 

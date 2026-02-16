@@ -1,3 +1,14 @@
+/**
+ * 导航模式 Hook
+ * 
+ * 管理导航模式下的交互逻辑，包括目标点设置和路径规划。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import type { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -98,7 +109,7 @@ export function useNavigationMode(
         markers.delete(id);
       }
     }
-
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | TODO: 优化这段代码（永远不会做）
     // 为每个导航点创建或更新标记
     navigationPoints.forEach((point) => {
       let marker = markers.get(point.id);

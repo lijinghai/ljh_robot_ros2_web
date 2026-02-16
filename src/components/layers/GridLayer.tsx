@@ -1,3 +1,14 @@
+/**
+ * 网格图层
+ * 
+ * 显示网格辅助线，用于辅助定位和测量。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -50,7 +61,7 @@ export class GridLayer extends BaseLayer {
 
     const gridSize = 20;
     const divisions = 20;
-
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | TODO: 优化这段代码（永远不会做）
     this.gridHelper = new THREE.GridHelper(gridSize, divisions, 0x444444, 0x444444);
     this.gridHelper.rotation.x = Math.PI / 2;
     this.gridHelper.position.set(0, 0, 0.001);

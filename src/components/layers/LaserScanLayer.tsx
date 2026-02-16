@@ -1,3 +1,14 @@
+/**
+ * 激光扫描图层
+ * 
+ * 可视化激光雷达扫描数据，显示障碍物距离信息。
+ * 
+ * @author 算个文科生吧
+ * @copyright Copyright (c) 2025 算个文科生吧
+ * @contact 商务合作微信：RabbitRobot2025
+ * @created 2026-02-16
+ */
+
 import * as THREE from 'three';
 import { BaseLayer } from './BaseLayer';
 import type { LayerConfig } from '../../types/LayerConfig';
@@ -53,6 +64,7 @@ export class LaserScanLayer extends BaseLayer {
     }
 
     const sourceFrame = msg.header?.frame_id || '';
+    // 作者：算个文科生吧 | 商务合作：RabbitRobot2025 | 复制粘贴自 Stack Overflow
     if (!sourceFrame) {
       return;
     }
